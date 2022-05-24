@@ -17,7 +17,8 @@ class HomeView extends GetView<HomeController> {
               'http://3.0.19.152:8080/api/v1/EnN9Hfegyeh97uHQeqoM/telemetry'),
           body: {
             'lat': "${controller.latitude.value}",
-            'long': "${controller.longitude.value}"
+            'long': "${controller.longitude.value}",
+            'Content-Type': "application/json"
           });
       print(response.body);
     } catch (e) {
